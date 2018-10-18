@@ -5,7 +5,7 @@
     export default{
         data(){
             return{
-                msg: 'hello! aaaaaawebp99ack4-vue-demo!'
+                msg: 'hello! a99ack4-vue-demo!'
             }
         }
     }
