@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import App from './App.vue';
+import Vue from "vue";
+import App from "./App";
 
-new Vue({
+var app = new Vue({
     el: "#root",
     render:h=>h(App)
-})
+});
