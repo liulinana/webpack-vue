@@ -1,7 +1,7 @@
 // 配置API接口地址
-let root = 'http://sunhaojie.com.test'
+let root = 'http://sunhaojie.com.test';
 // 引用axios
-let axios = require('axios')
+let axios = require('axios');
 // 自定义判断元素类型JS
 function toType (obj) {
     return ({}).toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase()
@@ -80,7 +80,7 @@ const apiAxios = (method, url, params, success, failure) => {
             }
         })
         .catch(function (err) {
-            let res = err.response
+            let res = err.response;
             if (res) {
                 window.alert('api error, HTTP CODE: ' + res.status)
             }

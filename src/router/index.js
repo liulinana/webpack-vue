@@ -4,7 +4,7 @@ import HelloWorld from '../components/HelloWorld'
 import form from '../components/form'
 import table from '../components/table'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
     routes: [
