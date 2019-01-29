@@ -18,9 +18,9 @@ let config = {
     //入口文件配置
     entry: {
         // main:[
-        //     './src/index.js'
+        //     './src/main.js'
         // ]
-        index: path.resolve(__dirname, './src/index.js'),
+        index: path.resolve(__dirname, './src/main.js'),
         vendors: ['vue', 'vue-router','vue-resource','vuex','element-ui',] // 需要进行单独打包的文件
     },
     //出口文件配置
@@ -151,6 +151,9 @@ let config = {
     },
     //搜索路径变量
     resolve: {
+        alias: {
+            vue: 'vue/dist/vue.js'
+        },
         extensions:['.js','.scss','.vue','.json']// 可以不加后缀, 直接使用 import xx from 'xx' 的语法
     }
 };
