@@ -69,7 +69,7 @@ let config = {
                         [
                             "import",
                             {
-                                "libraryName": "antd",
+                                "libraryName": "iview",
                                 "style": true
                             }
                         ]

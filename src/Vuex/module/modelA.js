@@ -1,5 +1,4 @@
 import { SOME_MUTATION } from '../mutation-types'
-//定义初始化变量
 
 export const modelA = {
     state : {
