@@ -1,8 +1,8 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '../components/HelloWorld'
-import form from '../components/form'
-import table from '../components/table'
+import Vue from 'vue';
+import Router from 'vue-router';
+import HelloWorld from '../components/HelloWorld';
+import form from '../components/form';
+import table from '../components/table';
 
 Vue.use(Router);
 
