@@ -7,18 +7,23 @@
 </template>
 <script>
     import store from '../Vuex/store';
+    import mapState from '../Vuex/mapState';
     export default {
         store: store,
         data() {
             return {
-                aa: store.state.count
+                aa: store.state.a.count
             }
         },
         methods: {
-            count() {
-                store.commit("INCREASE")
+            count () {
+
             }
-        }
+        },
+        // computed: mapState([
+        //     // 映射 this.count 为 store.state.count
+        //     'count'
+        // ])
     }
 
 </script>

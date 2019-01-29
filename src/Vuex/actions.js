@@ -6,4 +6,15 @@ export const increaseCounter = function ({ dispatch, state }) {
 }
 export const reduceCounter = function ({ dispatch, state }) {
     dispatch('REDUCE', 1)
-}
+};
+
+// actions: {
+//     actionA ({ commit }) {
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 commit('someMutation')
+//                 resolve()
+//             }, 1000)
+//         })
+//     }
+// }
