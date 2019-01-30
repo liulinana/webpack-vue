@@ -48,17 +48,13 @@
                     </div>
                 </div>
                 <div class="layout-copy">
-                    2011-2016 &copy; TalkingData
+                    2018-2019 &copy; TalkingData
                 </div>
             </Col>
         </Row>
     </div>
 </template>
 <script>
-    import Vue from 'vue';
-    import { Button, Radio, Menu } from 'iview';
-    Vue.component('Button',Button);
-    Vue.component('Radio',Radio);
     export default {
         data () {
             return{
