@@ -1,3 +1,4 @@
+
 <template>
     <div class="layout">
         <Row type="flex">
@@ -54,6 +55,10 @@
     </div>
 </template>
 <script>
+    import Vue from 'vue';
+    import { Button, Radio, Menu } from 'iview';
+    Vue.component('Button',Button);
+    Vue.component('Radio',Radio);
     export default {
         data () {
             return{
@@ -61,12 +66,12 @@
                 open:[],
             }
         },
-        computed: {
-            breadcrumbItem(){
-                return this.open.concat(this.openItem)
-            }
-
-        },
+        // computed: {
+        //     breadcrumbItem(){
+        //         return this.open.concat(this.openItem)
+        //     }
+        //
+        // },
         methods: {
             openView(e){
                 this.$router.push({

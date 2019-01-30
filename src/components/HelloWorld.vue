@@ -6,24 +6,22 @@
     </div>
 </template>
 <script>
-    import store from '../Vuex/store';
-    import mapState from '../Vuex/mapState';
+    import store from '../store/index';
+    import mapState from '../store/mapState';
+    import {increaseCounter} from '../store/actions'
     export default {
         store: store,
         data() {
             return {
-                aa: store.state.a.count
+                aa:store.getters.counts
             }
         },
         methods: {
             count () {
-
+                increaseCounter("INCREASE")
+                // store.commit("INCREASE")
             }
         },
-        // computed: mapState([
-        //     // 映射 this.count 为 store.state.count
-        //     'count'
-        // ])
     }
 
 </script>

@@ -34,6 +34,9 @@ let config = {
     module: {
         //加载器
         rules: [
+            { test:/iview.src.*?js$/,
+                loader:'babel-loader'
+            },
             {
                 test: /\.vue$/,
                 loader: 'vue-loader',
@@ -66,11 +69,13 @@ let config = {
                         "vue"
                     ],
                     "plugins": [
+                        "transform-runtime",
+                        "transform-vue-jsx",
                         [
                             "import",
                             {
                                 "libraryName": "iview",
-                                "style": true
+                                "libraryDirectory": "src/components"
                             }
                         ]
                     ]
