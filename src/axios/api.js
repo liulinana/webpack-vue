@@ -40,7 +40,7 @@ const ajaxPromise =function (method, url, data){
             method: method,
             headers:{...headers},
             data: data?JSON.stringify(data):null,
-            baseURL: root,
+            // baseURL: root,
             withCredentials: false
         }).then(
             (res) => {

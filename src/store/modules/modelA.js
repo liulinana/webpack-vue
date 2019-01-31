@@ -16,7 +16,6 @@ export const modelA = {
         },
         //官方例子，加减
         INCREASE(state, amount) {
-            debugger;
             state.count = state.count + amount
         },
         REDUCE(state, amount) {
