@@ -7,19 +7,27 @@
 </template>
 <script>
     import store from '../store/index';
-    import mapState from '../store/mapState';
     import {increaseCounter} from '../store/actions'
     export default {
         store: store,
         data() {
             return {
-                aa:store.getters.counts
+                // aa:this.$store.getters.counts
+            }
+        },
+        computed: {
+            aa () {
+                return store.getters.counts
             }
         },
         methods: {
             count () {
-                increaseCounter("INCREASE")
-                // store.commit("INCREASE")
+                // this.$store.dispatch("INCREASE")
+                // store.dispatch("increaseCounter")
+                increaseCounter("INCREASE",10)
+                // store.commit("INCREASE",{
+                //     amount: 10
+                // })
             }
         },
     }

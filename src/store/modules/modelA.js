@@ -1,4 +1,5 @@
-import { SOME_MUTATION } from '../mutation-types'
+import { SOME_MUTATION } from '../mutation-types';
+import {increaseCounter} from '../actions'
 
 export const modelA = {
     state : {
@@ -6,7 +7,6 @@ export const modelA = {
             name:'张三'
         }],
         count:1,
-        amount: 1,
     },
 
     //定义动作
@@ -17,7 +17,7 @@ export const modelA = {
         //官方例子，加减
         INCREASE(state, amount) {
             debugger;
-            state.count = state.count + 3
+            state.count = state.count + amount
         },
         REDUCE(state, amount) {
             state.count = state.count - amount
@@ -31,6 +31,10 @@ export const modelA = {
         counts: state => {
             return state.count
         }
+    },
+
+    actions: {
+        increaseCounter
     }
 };
 

@@ -1,5 +1,7 @@
+import store from '../store/index';
 function makeAction(type,arg) {
-    return ({ dispatch }) => dispatch(type, arg);
+    // ({dispatch}) =>{dispatch(type)}
+    store.commit(type,arg);
 };
 
 export const listsCounter = (type,arg) => makeAction(type,arg);
