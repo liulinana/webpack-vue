@@ -1,6 +1,7 @@
 <template>
     <div>
         <div>{{message}}</div>
+        <p>ffffff</p>
     </div>
 </template>
 
