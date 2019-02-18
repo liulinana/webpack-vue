@@ -15,6 +15,7 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
  */
 // let CommonsChunkPlugin = config.optimization.splitChunks;
 let config = {
+    mode: 'development',
     //入口文件配置
     entry: {
         // main:[

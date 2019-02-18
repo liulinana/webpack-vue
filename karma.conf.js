@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Thu Feb 14 2019 17:16:08 GMT+0800 (CST)
 
-var webpack = require ('webpack');
+let webpack = require ('webpack');
 module.exports = function(config) {
   config.set({
 
@@ -68,4 +68,4 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   })
-}
+};
