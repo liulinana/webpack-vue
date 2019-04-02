@@ -11,8 +11,8 @@
         <p>Original message: "{{ message }}"</p>
         <p>Computed reversed message: {{ reversedMessage() }}</p>
         <div
-                class="static"
-                v-bind:class="{ active: isActive, 'text-danger': hasError }"
+            class="static"
+            v-bind:class="{ active: isActive, 'text-danger': hasError }"
         ></div>
     </div>
 </template>
@@ -73,7 +73,7 @@
                 // api.get(`/dd`);
             },
             temporaryStorage () {
-                return this.local=!this.local
+                return this.local = !this.local
             }
         },
     }
