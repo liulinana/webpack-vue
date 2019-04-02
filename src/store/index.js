@@ -8,6 +8,9 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     modules: {
         a:modelA,
-        b:modelB
-    }
+        b:modelB,
+    },
+    state:{
+        seen:true,
+    },
 })
