@@ -14,6 +14,7 @@
             class="static"
             v-bind:class="{ active: isActive, 'text-danger': hasError }"
         ></div>
+        <button @click="sendParams">传递</button>
         <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
             <FormItem prop="user">
                 <Input type="text" v-model="formInline.user" placeholder="Username">
@@ -104,15 +105,26 @@
                 return this.local = !this.local
             },
             handleSubmit(name) {
-                console.log(this.$refs[name])
-                debugger
                 this.$refs[name].validate((valid) => {
                     if (valid) {
-                        debugger
                         this.$Message.success('Success!');
                     } else {
                         this.$Message.error('Fail!');
                     }
+                })
+            },
+            sendParams () {
+                this.$router.push({
+                    path: '/table',
+                    name: 'table',
+                    params: {
+                        name: '我是路由获取过来的值',
+                        dataObj: 'test message'
+                    }
+                    /*query: {
+                        name: 'name',
+                        dataObj: this.msg
+                    }*/
                 })
             }
         },
