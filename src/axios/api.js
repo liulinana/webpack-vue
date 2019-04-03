@@ -43,17 +43,18 @@ const ajaxPromise =function (method, url, data){
             // baseURL: root,
             withCredentials: false
         }).then(
-            (res) => {
+            res => {
                 resolve(res)
             }
         ).catch(
             err => {
-                message.error(err.message, 3)
+                message.error(err.message, 3);
                 reject(err);
             }
         )
     })
 };
+
 const apiAxios = (method, url, params, success, failure) => {
     if (params) {
         params = filterNull(params)
@@ -66,19 +67,21 @@ const apiAxios = (method, url, params, success, failure) => {
         baseURL: root,
         withCredentials: false
     })
-        .then( res => {
-            if (res.data.status === 200) {
-                if (success) {
-                    success(res.data)
-                }
-            } else {
-                if (failure) {
-                    failure(res.data)
+        .then(
+            res => {
+                if (res.data.status === 200) {
+                    if (success) {
+                        success(res.data)
+                    }
                 } else {
-                    window.alert('error: ' + JSON.stringify(res.data))
+                    if (failure) {
+                        failure(res.data)
+                    } else {
+                        window.alert('error: ' + JSON.stringify(res.data))
+                    }
                 }
             }
-        })
+        )
         .catch(function (err) {
             let res = err.response;
             if (res) {

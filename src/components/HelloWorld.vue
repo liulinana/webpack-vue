@@ -98,7 +98,7 @@
             },
             api () {
                 this.$store.state.seen=false;
-                // api.get(`/dd`);
+                api.get(`/dd`);
             },
             temporaryStorage () {
                 return this.local = !this.local
