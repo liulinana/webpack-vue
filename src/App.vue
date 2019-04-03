@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="layout-copy">
-                    2018-2019 &copy; TalkingData
+                    author &copy; lln
                 </div>
             </Col>
         </Row>
