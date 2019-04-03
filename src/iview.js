@@ -164,9 +164,11 @@ const iviewModule = {
 };
 
 // 循环注册全局组件
-Object.keys(iviewModule).forEach(key => {
-    Vue.component(key, iviewModule[key])
-});
+Object.keys(iviewModule).forEach(
+    key => {
+        Vue.component(key, iviewModule[key])
+    }
+);
 
 
 
