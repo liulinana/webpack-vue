@@ -3,6 +3,7 @@ let webpack = require('webpack');
 let OpenBrowserPlugin = require('open-browser-webpack-plugin');
 let WebpackDevServer = require('webpack-dev-server');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
+// const config = require('./config');
 
 // let CommonsChunkPlugin = require('CommonsChunkPlugin');
 /*
@@ -15,14 +16,14 @@ let HtmlWebpackPlugin = require('html-webpack-plugin');
  */
 // let CommonsChunkPlugin = config.optimization.splitChunks;
 let config = {
-    mode: 'development',
+    // mode: 'development',
     //入口文件配置
     entry: {
         // main:[
         //     './src/main.js'
         // ]
         index: path.resolve(__dirname, './src/main.js'),
-        vendors: ['vue', 'vue-router','vue-resource','vuex','element-ui',] // 需要进行单独打包的文件
+        vendors: ['vue', 'vue-router','vue-resource','vuex','element-ui','iview'] // 需要进行单独打包的文件
     },
     //出口文件配置
     output: {
@@ -112,7 +113,7 @@ let config = {
         // }),
         new HtmlWebpackPlugin({
             title: "This is the result",
-            filename: "index.html",
+            filename: path.resolve(__dirname, 'dist/html/index.html'),
             inject: "body",
             favicon: "",
             minify: {
@@ -137,13 +138,20 @@ let config = {
         new OpenBrowserPlugin({
             url: 'http://localhost:8080'
         }),
-        //提取功能模块
-        // new CommonsChunkPlugin({
+        // 提取功能模块
+
+        //  CommonsChunkPlugin({
         //     name: 'vendors', // 将公共模块提取，生成名为`vendors`的chunk
         //     minChunks: 2, //公共模块被使用的最小次数。配置为2，也就是同一个模块只有被2个以外的页面同时引用时才会被提取出来作为common chunks
         //     // children:true  //如果为true,那么公共组件的所有子依赖都将被选择进来
         // }),
+
     ],
+    optimization:{
+        splitChunks: {
+            name: 'vendors'
+        }
+    },
     //使用webpack-dev-server，启动热刷新插件
     devServer: {
         historyApiFallback:true,
