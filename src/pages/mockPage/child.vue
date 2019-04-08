@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>{{message}}</div>
-        <p>ffffff</p>
+        <Form>ffffff</Form>
     </div>
 </template>
 

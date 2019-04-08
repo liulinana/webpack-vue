@@ -36,7 +36,7 @@
     import store from '../store/index';
     import api from '../axios/api.js';
     import {increaseCounter} from '../store/actions';
-    import child from './child';
+    import child from './mockPage/child';
     import {getStore, setStore, removeStore, clearStore} from './storage';
     export default {
         store: store,

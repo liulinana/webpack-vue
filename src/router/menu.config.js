@@ -1,6 +1,6 @@
-import HelloWorld from '../components/HelloWorld';
-import form from '../components/form';
-import table from '../components/table';
+import HelloWorld from '../pages/HelloWorld';
+import form from '../pages/form';
+import table from '../pages/table';
 
 const menu =[
    {
