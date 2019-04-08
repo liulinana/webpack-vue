@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Errorinfo from './error404';
+import ErrorInfo from './error404';
 import menu from './menu.config'
 
 Vue.use(Router);
@@ -10,16 +10,16 @@ const router = new Router({
     routes: [
         // 404page
         {
-            path: '/errorinfo',
-            name: 'Errorinfo',
-            component: Errorinfo
+            path: '/errorInfo',
+            name: 'ErrorInfo',
+            component: ErrorInfo
         },
     ].concat(menu),
 });
 
 router.beforeEach((to, from, next) => {
     if (to.matched.length === 0) {
-        from.name ? next('/errorinfo'): next({
+        from.name ? next('/errorInfo'): next({
             name: from.name
         }) ;
     } else {
