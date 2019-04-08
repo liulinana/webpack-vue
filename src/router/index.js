@@ -1,9 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '../components/HelloWorld';
-import form from '../components/form';
-import table from '../components/table';
-import Errorinfo from './error404'
+import Errorinfo from './error404';
+import menu from './menu.config'
 
 Vue.use(Router);
 
@@ -16,22 +14,7 @@ const router = new Router({
             name: 'Errorinfo',
             component: Errorinfo
         },
-        {
-            path: '/',
-            name: 'Hello',
-            component: HelloWorld
-        },
-        {
-            path: '/form',
-            name: 'form',
-            component: form
-        },
-        {
-            path: '/table',
-            name: 'table',
-            component: table
-        }
-    ],
+    ].concat(menu),
 });
 
 router.beforeEach((to, from, next) => {
