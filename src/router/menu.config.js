@@ -5,15 +5,15 @@ import table from '../pages/table';
 const menu =[
    {
         path: '/',
-            name: 'Hello',
+        name: 'Hello',
         component: HelloWorld
     },{
         path: '/form',
-            name: 'form',
+        name: 'form',
         component: form
     },{
         path: '/table',
-            name: 'table',
+        name: 'table',
         component: table
     }
 ];
